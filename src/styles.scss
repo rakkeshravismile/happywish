@@ -1,1 +1,250 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$Birthday-primary: mat-palette($mat-indigo);
+$Birthday-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$Birthday-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$Birthday-theme: mat-light-theme($Birthday-primary, $Birthday-accent, $Birthday-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($Birthday-theme);
+
 /* You can add global styles to this file, and also import other style files */
+app-root,app-intro{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: stretch;
+    height: 100vh;
+}
+// app-root {
+//     min-height: 100%;
+// }
+// app-intro {
+    // order: 0;
+    // flex: 1 1 auto;
+    // align-self: auto;
+    // display: block;
+    // min-height: 100%;
+// }
+$vanilla: #f0e4d0;
+$chocolate: #553c13;
+
+body {
+    background-color: #333;
+}
+
+@mixin foodColoring($color) {
+    background-color: $color;
+    box-shadow:
+        0 2px 0px lighten($color, 5%),
+        0 4px 0px darken($color, 8.2%),
+        0 6px 0px darken($color, 8.4%),
+        0 8px 0px darken($color, 8.6%),
+        0 10px 0px darken($color, 8.8%),
+        0 12px 0px darken($color, 9%),
+        0 14px 0px darken($color, 9.2%),
+        0 16px 0px darken($color, 9.4%),
+        0 18px 0px darken($color, 9.6%),
+        0 20px 0px darken($color, 9.8%),
+        0 22px 0px darken($color, 10%),
+        0 24px 0px darken($color, 10.2%),
+        0 26px 0px darken($color, 10.4%),
+        0 28px 0px darken($color, 10.6%),
+        0 30px 0px darken($color, 10.8%);
+}
+
+.cake {
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    margin-top: -70px;
+    margin-left: -125px;
+}
+
+.plate {
+    width: 270px;
+    height: 110px;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    box-shadow:
+        0 2px 0 darken(#ccc, 10%),
+        0 4px 0 darken(#ccc, 10%),
+        0 5px 40px rgba(black, 0.5);
+}
+
+.cake > * {
+    position: absolute;
+}
+
+.layer {
+    position: absolute;
+    display: block;
+    width: 250px;
+    height: 100px;
+    border-radius: 50%;
+    @include foodColoring($chocolate);
+}
+
+.layer-top { top: 0px; }
+.layer-middle { top: 33px; }
+.layer-bottom { top: 66px; }
+
+.icing {
+    top: 2px;
+    left: 5px;
+    background-color: $vanilla;
+    width: 240px;
+    height: 90px;
+    border-radius: 50%;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        right: 5px;
+        bottom: 6px;
+        left: 5px;
+        background-color: lighten($vanilla, 3%);
+        box-shadow:
+            0 0 4px lighten($vanilla, 5%),
+            0 0 4px lighten($vanilla, 5%),
+            0 0 4px lighten($vanilla, 5%);
+        border-radius: 50%;
+        z-index: 1;
+    }
+}
+
+.drip {
+    display: block;
+    width: 50px;
+    height: 60px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: $vanilla;
+}
+
+.drip1 {
+    top: 53px;
+    left: 5px;
+    transform: skewY(15deg);
+    height: 48px;
+    width: 40px;
+}
+
+.drip2 {
+    top: 69px;
+    left: 181px;
+    transform: skewY(-15deg);
+}
+
+.drip3 {
+    top: 54px;
+    left: 90px;
+    width: 80px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+.candle {
+    background-color: #7B020B;
+    width: 16px;
+    height: 50px;
+    border-radius: 8px / 4px;
+    top: -20px;
+    left: 50%;
+    margin-left: -8px;
+    z-index: 10;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: lighten(#7B020B, 10%);
+    }
+}
+
+.flame {
+    position: absolute;
+    background-color: orange;
+    width: 15px;
+    height: 35px;
+    border-radius: 10px 10px 10px 10px / 25px 25px 10px 10px;
+    top: -34px;
+    left: 50%;
+    margin-left: -7.5px;
+    z-index: 10;
+    box-shadow:
+        0 0 10px rgba(orange, 0.5),
+        0 0 20px rgba(orange, 0.5),
+        0 0 60px rgba(orange, 0.5),
+        0 0 80px rgba(orange, 0.5);
+    transform-origin: 50% 90%;
+    animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+    0% {
+        transform: skewX(5deg);
+        box-shadow: 
+            0 0 10px rgba(orange, 0.2),
+            0 0 20px rgba(orange, 0.2),
+            0 0 60px rgba(orange, 0.2),
+            0 0 80px rgba(orange, 0.2) }
+    25% {
+        transform: skewX(-5deg);
+        box-shadow:
+            0 0 10px rgba(orange, 0.5),
+            0 0 20px rgba(orange, 0.5),
+            0 0 60px rgba(orange, 0.5),
+            0 0 80px rgba(orange, 0.5) }
+    50% {
+        transform: skewX(10deg);
+        box-shadow:
+            0 0 10px rgba(orange, 0.3),
+            0 0 20px rgba(orange, 0.3),
+            0 0 60px rgba(orange, 0.3),
+            0 0 80px rgba(orange, 0.3) }
+    75% {
+        transform: skewX(-10deg);
+        box-shadow:
+            0 0 10px rgba(orange, 0.4),
+            0 0 20px rgba(orange, 0.4),
+            0 0 60px rgba(orange, 0.4),
+            0 0 80px rgba(orange, 0.4) }
+    100% {
+        transform: skewX(5deg);
+        box-shadow:
+            0 0 10px rgba(orange, 0.5),
+            0 0 20px rgba(orange, 0.5),
+            0 0 60px rgba(orange, 0.5),
+            0 0 80px rgba(orange, 0.5) }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

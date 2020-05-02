@@ -1,0 +1,57 @@
+<!-- <p #beginning>counter works!</p> -->
+<div #beginning class="counterContainer">
+    <div class="up-button-container">
+        <div class="content">
+          <!-- <p>Hover me !</p> -->
+          <svg id="more-arrows" (click)="scrollUp()">
+            <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
+            <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+            <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+          </svg>
+        </div>
+    </div>
+    <!-- <div id="background"></div>
+    <div id="midground"></div>
+    <div id="foreground"></div> -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    <!-- <div class="saturn">
+        <div class="odometerContainer">
+            <ng2-odometer [number]="number" [theme]="'train-station'" [animation]="'slide'" auto="false" [duration]="duration" [observable]="observable"></ng2-odometer>
+        </div>
+    </div> -->
+    <div class="goldstar1">
+        <div class="odometerContainerStar">
+            <ng2-odometer [number]="birthdays" [theme]="'slot-machine'" [animation]="'slide'" auto="false" [duration]="duration" [observable]="observable"></ng2-odometer>
+        </div>
+    </div>
+    <div class="full-moon">
+        <div class="odometerContainerMoon">
+            <ng2-odometer [number]="meetdays" [theme]="'train-station'" [animation]="'slide'" auto="false" [duration]="duration" [observable]="observable"></ng2-odometer>
+        </div>
+    </div>
+    <div class="goldstar2">
+        <div class="odometerContainerStar">
+            <ng2-odometer [number]="javadays" [theme]="'slot-machine'" [animation]="'slide'" auto="false" [duration]="duration" [observable]="observable"></ng2-odometer>
+        </div>
+    </div>
+    <div class="textBg1">
+        <span #spanText1 *ngIf="inView">{{firstSentence}}</span>
+    </div>
+    <div class="textBg2">
+        <span #spanText2 *ngIf="inView">{{secondSentence}}</span>
+    </div>
+    <div class="textBg3">
+        <span #spanText3 *ngIf="inView">{{thirdSentence}}</span>
+    </div>
+    <div class="button-container">
+        <div class="content">
+          <!-- <p>Hover me !</p> -->
+          <svg id="more-arrows" (click)="scrollDown()">
+            <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
+            <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+            <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+          </svg>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,46 @@
+<!-- <p>calendar works!</p> -->
+<div #beginning class="calendarContainer">
+    <div class="up-button-container">
+      <div class="content">
+        <!-- <p>Hover me !</p> -->
+        <svg id="more-arrows" (click)="scrollUp()">
+          <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
+          <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+          <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+        </svg>
+      </div>
+    </div>
+    <!-- <img [src]="'https://s3-us-west-2.amazonaws.com/s.cdpn.io/221808/sky.jpg'" class="background"> -->
+    <p class="message">all your dreams can come true<br>if you have the courage to pursue them</p>
+    <ng-container *ngFor="let i of arrayOne(100)">
+      <div class="circle-container">
+        <div class="circle"></div>
+      </div>
+    </ng-container>
+    <div class="icon1" (click)="openGallery(16)">
+        <strong>Before 2016</strong><br>
+        <!-- <span>2016</span> -->
+    </div>
+    <div class="icon2" (click)="openGallery(17)">
+      <strong>2017-2018</strong><br>
+      <!-- <span>-2018</span> -->
+  </div>
+  <div class="icon3" (click)="openGallery(18)">
+    <strong>2018-2019</strong><br>
+    <!-- <span>-2019</span> -->
+  </div>
+  <div class="icon4" (click)="openGallery(19)">
+    <strong>2019-2020</strong><br>
+    <!-- <span>-2020</span> -->
+  </div>
+  <div class="button-container">
+    <div class="content">
+      <!-- <p>Hover me !</p> -->
+      <svg id="more-arrows" (click)="scrollDown()">
+        <polygon class="arrow-top" points="37.6,27.9 1.8,1.3 3.3,0 37.6,25.3 71.9,0 73.7,1.3 "/>
+        <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+        <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+      </svg>
+    </div>
+  </div>
+</div>

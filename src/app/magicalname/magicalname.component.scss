@@ -1,0 +1,398 @@
+div.nameContainer{
+    height: 100vh;
+    position: relative;
+    background: url('src/assets/images/skybg8.jpg');
+    background-size: cover;
+}
+
+.up-button-container {
+    // background: PaleGoldenRod  ;
+    // height: 100vh;
+    position: absolute;
+    padding: 20px;
+    text-align: center;
+    top: 2%;
+    left: 50%;
+    right: 50%;
+    transform: rotate(180deg);
+  }
+  
+  .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+      transform: translate(-50%, -50%);
+    
+    p {
+      margin: 0 0 20px;
+    }
+    
+}
+  
+/* Arrow & Hover Animation */
+#more-arrows {
+    width: 75px;
+    height: 65px;
+    
+    &:hover {
+      
+      polygon {
+        fill: #24A0ED;
+        transition: all .2s ease-out;
+  
+        &.arrow-bottom {
+          transform: translateY(-18px);
+        }
+  
+        &.arrow-top {
+          transform: translateY(18px);
+        }
+        
+      }
+    
+    }
+    
+}
+  
+polygon {
+    fill: #24A0ED;
+    transition: all .2s ease-out;
+      
+    &.arrow-middle {
+        opacity: 0.75;
+      }
+  
+      &.arrow-top {
+        opacity: 0.5
+      }
+}
+
+.fireworks1 {
+    position: absolute;
+    top: 12%;
+    // left:20%;
+    width: 500px;
+    height: 500px;
+    // background: image();
+    background: url('src/assets/images/fireworks1.gif');
+    animation: moveFireworks 2s linear;
+    opacity: 0;
+}
+
+@keyframes moveFireworks {
+    25% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.fireworks2 {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 500px;
+    height: 500px;
+    background: url('src/assets/images/fireworks1.gif');
+    animation: moveFireworks 2s linear;
+    opacity: 0;
+    // animation: moveFireworks2 2.5s linear;
+    // opacity: 0;
+}
+
+.clickpanel {
+    left: 18%;
+    color: #d4a537;
+    border-style: double;
+    top: 2%;
+    -webkit-animation: blink 1.5s linear infinite;
+    animation: blink 1.5s linear infinite;
+    font-size: 20px;
+    font-family: cursive;
+    visibility: visible;
+    /* background-color: black; */
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 5px;
+    position: absolute;
+    z-index: 1;
+    margin-left: -25px;
+    // left: 18%;
+    // color: #d4a537;
+    // border-style: double;
+    // // padding: 5px;
+    // // text-align: center;
+    // // position: absolute;
+    // top: 3%;
+    // -webkit-animation: blink 1.5s linear infinite;
+    // animation: blink 1.5s linear infinite;
+    // font-size: 20px;
+    // font-family: cursive;
+    // visibility: visible;
+    // // width: 120px;
+    // background-color: black;
+    // // color: #fff;
+    // text-align: center;
+    // border-radius: 6px;
+    // padding: 5px 0;
+    // position: absolute;
+    // z-index: 1;
+    // // bottom: 150%;
+    // // left: 50%;
+    // margin-left: -60px;
+}
+
+.clickpanel::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 47%;
+    margin-left: -12px;
+    border-width: 15px;
+    border-style: solid;
+    border-color: #d4a537 transparent transparent transparent;
+    // content: "";
+    // position: absolute;
+    // top: 100%;
+    // left: 50%;
+    // margin-left: -5px;
+    // border-width: 5px;
+    // border-style: solid;
+    // border-color: black transparent transparent transparent;
+  }
+
+@keyframes blink {
+    0% { opacity: 0; }
+    30%,60%,80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.birdswinging {
+    background: url('src/assets/images/fireworks1.gif');
+    position: absolute;
+    width: 400px;
+    height: 200px;
+    top: 20%;
+    left: 20%;
+    background-size: cover;
+}
+
+.butterfly {
+    position: absolute;
+    top: 25%;
+    left:35%;
+}
+
+.path {
+    stroke-dasharray: 329;
+    stroke-dashoffset: 329;
+    // animation: dash 3s linear alternate infinite;
+  }
+
+  .pathanim {
+    animation: dash 3s linear forwards;
+  }
+  
+  .path1 {
+    stroke-dasharray: 367;
+    stroke-dashoffset: 367;
+    // animation: dash1 3s linear alternate infinite;
+  }
+
+  .path1anim {
+    animation: dash1 3s linear forwards;
+  }
+  
+  .path2 {
+    stroke-dasharray: 282;
+    stroke-dashoffset: 282;
+    // animation: dash2 3s linear alternate infinite;
+  }
+
+  .path2anim {
+    animation: dash2 3s linear forwards;
+  }
+  
+  .pathname {
+    stroke-dasharray: 2425;
+    stroke-dashoffset: 2425;
+    // animation: dashname 3s linear alternate infinite;
+  }
+
+  .pathnameanim {
+    animation: dashname 6s linear forwards;
+  }
+  
+  @keyframes dash {
+    from {
+      stroke-dashoffset: 329;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes dash1 {
+    from {
+      stroke-dashoffset: 367;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes dash2 {
+    from {
+      stroke-dashoffset: 282;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes dashname {
+    from {
+      stroke-dashoffset: 2425;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .obj {
+    color: red;
+    position: absolute;
+    offset-path: path('M 228 96 L 228 96 Q 228 84 252 72 Q 264 108 240 144 Q 228 126 276 108 Q 312 90 300 72 Q 282 108 288 144 Q 312 132 312 120 ');
+    top: 0;
+    left: 0;
+    // animation: move 3s linear alternate infinite;
+    background: url('src/assets/images/butterfly.gif');
+    background-size: cover;
+    width: 6rem;
+    height: 6rem;
+//   width: 1.2rem;
+//   height: 1.2rem;
+//   border-radius: 50%;
+//   background-color: red;
+  }
+
+  .objanim {
+    animation: move 3s linear forwards;
+  }
+
+  .objnameanim {
+    animation: move 6s linear forwards; 
+  }
+  
+  .objB {
+    color: red;
+    position: absolute;
+    offset-path: path('M 348 132 L 348 132 L 360 144 Q 372 108 360 72 L 348 84 L 360 72 Q 396 60 420 96 Q 396 120 372 108 Q 396 108 420 132 Q 390 156 360 144  ');
+    top: 0;
+    left: 0;
+    // animation: move 3s linear alternate infinite;
+    background: url('src/assets/images/butterfly.gif');
+    background-size: cover;
+    width: 6rem;
+    height: 6rem;
+//   width: 1.2rem;
+//   height: 1.2rem;
+//   border-radius: 50%;
+//   background-color: red;
+  }
+  
+  .objD {
+    color: red;
+    position: absolute;
+    offset-path: path('M 468 132 L 468 132 L 480 144 Q 504 108 480 72 L 468 84 L 480 72 Q 516 60 540 108 Q 516 156 480 144');
+    top: 0;
+    left: 0;
+    // animation: move 3s linear alternate infinite;
+    background: url('src/assets/images/butterfly.gif');
+    background-size: cover;
+    width: 6rem;
+    height: 6rem;
+//   width: 1.2rem;
+//   height: 1.2rem;
+//   border-radius: 50%;
+//   background-color: red;
+  }
+  
+  .objname {
+    color: red;
+    position: absolute;
+    offset-path: path('M 168 204 L 168 204 L 180 192 Q 216 210 216 228 Q 240 210 252 192 L 216 228 Q 180 246 180 264 Q 288 228 288 192 A 12 24 177 1 0 360 192 L 378 204 L 396 192 L 432 264 L 456 192 C 456 204 492 204 492 192 Q 492 228 474 264 Q 492 228 492 192 Q 492 228 510 264 Q 495 252 484 230 Q 540 228 552 192 L 540 264 L 528 252 L 540 264 L 552 192 Q 600 192 600 216 Q 576 240 552 228 L 588 264 Q 636 228 636 192 Q 636 228 684 264 L 624 240 Q 708 216 720 192 Q 732 228 714 264 Q 732 228 720 192 L 768 264 Q 756 228 774 192 Q 761 194 828 216 L 804 204 L 828 192 Q 842 228 816 264 Q 804 258 800 248 Q 828 238 852 240 ');
+    top: 0;
+    left: 0;
+    // animation: move 3s linear alternate infinite;
+    background: url('src/assets/images/butterfly.gif');
+    background-size: cover;
+    width: 6rem;
+    height: 6rem;
+//   width: 1.2rem;
+//   height: 1.2rem;
+//   border-radius: 50%;
+//   background-color: red;
+  }
+  
+  @keyframes move {
+      0% {
+          offset-distance: 0%;
+      }
+      100% {
+      offset-distance: 100%;
+    }
+  }
+
+//Uncomment for third
+// .path {
+//     stroke-dasharray: 4337;
+//     stroke-dashoffset: 4337;
+//     animation: dash 5s linear forwards;
+//   }
+  
+//   @keyframes dash {
+//     from {
+//       stroke-dashoffset: 4337;
+//     }
+//     to {
+//       stroke-dashoffset: 0;
+//     }
+//   }
+  
+//   .obj {
+//     color: red;
+//     position: absolute;
+//     offset-path: path('M 42 70 L 42 70 Q 42 49 56 28 Q 112 133 98 238 Q 154 133 140 28 Q 154 133 98 238 Q 56 322 56 406 Q 154 217 182 28 Q 182 203 210 378 Q 224 392 238 406 Q 266 392 266 378 Q 308 203 294 28 L 322 42 L 350 28 L 392 406 L 434 28 L 462 42 L 490 28 Q 504 217 462 406 Q 504 217 490 28 L 546 406 Q 532 322 490 238 L 560 224');
+//     top: 0;
+//       left: 0;
+//       animation: move 5s linear forwards;
+    //   background: url('src/assets/images/butterfly.gif');
+    //   background-size: cover;
+    //   width: 8rem;
+    //   height: 8rem;
+//     //   border-radius: 50%;
+//     //   background-color: red;
+//   }
+  
+//   @keyframes move {
+//       0% {
+//           offset-distance: 0%;
+//       }
+//       100% {
+//       offset-distance: 100%;
+//     }
+//   }
+
+
+  
+  .neon {
+    color: #fff;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 40px #0ff,
+      0 0 80px #0ff,
+      0 0 90px #0ff,
+      0 0 100px #0ff,
+      0 0 150px #0ff;
+  }

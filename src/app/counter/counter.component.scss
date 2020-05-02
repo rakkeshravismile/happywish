@@ -1,0 +1,448 @@
+div.counterContainer{
+    height: 100vh;
+    // order: 0;
+    // flex: 1 1 auto;
+    // align-self: auto;
+    // display: block;
+    // min-height: 100%;
+    // height: 100%;
+    position: relative;
+}
+
+#background {
+	background: black url(src/assets/images/background.png) repeat 5% 5%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 100;
+	
+	// -webkit-animation-name: STAR-MOVE;
+	// -webkit-animation-duration: 200s;
+	// -webkit-animation-timing-function: linear;
+	// -webkit-animation-iteration-count: infinite;
+}
+
+#midground {
+	background: url(src/assets/images/midground.png) repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 200;
+	
+	// -webkit-animation-name: STAR-MOVE;
+	// -webkit-animation-duration: 150s;
+	// -webkit-animation-timing-function: linear;
+	// -webkit-animation-iteration-count: infinite;
+}
+
+#foreground {
+	background: url(src/assets/images/foreground.png) repeat 35% 35%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 300;
+	
+	// -webkit-animation-name: STAR-MOVE;
+	// -webkit-animation-duration: 100s;
+	// -webkit-animation-timing-function: linear;
+	// -webkit-animation-iteration-count: infinite;
+}
+
+.stars, .twinkling, .clouds {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+  }
+
+  .odometerContainerStar {
+	  position: absolute;
+	  top: 50%;
+	  left: 36%;
+	  font-size: medium;
+  }
+
+  .odometerContainerMoon {
+	position: absolute;
+	// top: 41%;
+	// left: 33%;
+	// font-size: x-large;
+	top: 43%;
+	left: 33%;
+	font-size: x-large;
+}
+
+  .textBg1 {
+	position: absolute;
+    bottom: 12%;
+    left: 11%;
+    display: block;
+    /* border-radius: 50%; */
+    width: 250px;
+    height: 270px;
+    z-index: 1;
+    // background-image: url(astronaut-helmet1.jpg);
+	// background-size: cover;
+	// position: absolute;
+	// top: 25%;
+	// bottom: 25%;
+	// bottom: 1%;
+	// left: 77%;
+	// left: 10%;
+	// left: 8%;
+	// display: block;
+	// border-radius: 50%;
+	// width: 250px;
+	// height: 250px;
+	// width: 300px;
+	// height: 350px;
+	// z-index: 1;
+	background-image: url('src/assets/images/astronaut-helmet1.jpg');
+	background-size: cover; 
+	& span {
+		color: deeppink;
+		position: absolute;
+		top: 31%;
+		left: 31%;
+		width: 100px;
+		height: 90px;
+		font-size: 26px;
+		font-family: Trattatello,fantasy;
+		text-align: center;
+		overflow: hidden;
+		line-height: 32px;
+		animation: appear-out 2s steps(40,end);
+		// animation: type 2s steps(40,end);
+	  }
+  }
+
+  .textBg2 {
+	position: absolute;
+    bottom: 12%;
+    left: 42.5%;
+    display: block;
+    /* border-radius: 50%; */
+    width: 250px;
+    height: 270px;
+	z-index: 1;
+	background-image: url('src/assets/images/astronaut-helmet1.jpg');
+	background-size: cover; 
+	& span {
+		color: deeppink;
+		position: absolute;
+		top: 35%;
+		left: 31%;
+		width: 100px;
+		height: 90px;
+		font-size: 26px;
+		font-family: Trattatello,fantasy;
+		text-align: center;
+		overflow: hidden;
+		line-height: 32px;
+		animation: appear-out 2s steps(40,end);
+		// animation: type 2s steps(40,end);
+	}
+  }
+
+  .textBg3 {
+	position: absolute;
+    bottom: 12%;
+    right: 9%;
+    display: block;
+    /* border-radius: 50%; */
+    width: 250px;
+    height: 270px;
+    z-index: 1;
+	background-image: url('src/assets/images/astronaut-helmet1.jpg');
+	background-size: cover; 
+	& span {
+		color: deeppink;
+		position: absolute;
+		top: 30%;
+		left: 31%;
+		width: 100px;
+		height: 100px;
+		font-size: 26px;
+		font-family: Trattatello,fantasy;
+		text-align: center;
+		overflow: hidden;
+		line-height: 32px;
+		animation: appear-out 2s steps(40,end);
+		// animation: type 2s steps(40,end);
+	  }
+  }
+
+  .earth {
+	position: absolute;
+	// top: 25%;
+	top: 19%;
+	// left: 77%;
+	right: 10%;
+	display: block;
+	border-radius: 50%;
+	// width: 250px;
+	// height: 250px;
+	width: 300px;
+	height: 300px;
+	z-index: 1;
+	background-image: url('src/assets/images/earth.jpg');
+	background-size: cover; 
+  }
+
+  .crescent {
+	position: absolute;
+	// top: 30%;
+	top: 25%;
+	left: 10%;
+	display: block;
+	border-radius: 50%;
+	// width: 150px;
+	// height: 150px;
+	width: 200px;
+	height: 200px;
+	z-index: 1;
+	box-shadow: inset -16px 5px 0 3px #f3d076; //previously -12px
+	// background-image: url('src/assets/images/full-moon.png');
+	// background-size: cover;  
+  }
+
+  .goldstar1 {
+	position: absolute;
+	// top: 30%;
+	top: 18%;
+	left: 10%;
+	display: block;
+	// border-radius: 50%;
+	// width: 150px;
+	// height: 150px;
+	width: 250px;
+	height: 240px;
+	z-index: 1;
+	// box-shadow: inset -16px 5px 0 3px #f3d076; //previously -12px
+	background-image: url('src/assets/images/goldstar1.jpg');
+	background-size: cover;  
+  }
+
+  .goldstar2 {
+	position: absolute;
+	// top: 30%;
+	top: 18%;
+	right: 10%;
+	display: block;
+	// border-radius: 50%;
+	// width: 150px;
+	// height: 150px;
+	width: 250px;
+	height: 240px;
+	z-index: 1;
+	// box-shadow: inset -16px 5px 0 3px #f3d076; //previously -12px
+	background-image: url('src/assets/images/goldstar1.jpg');
+	background-size: cover;  
+  }
+
+//   .saturn {
+// 	position: absolute;
+// 	top: 30%;
+// 	left: 10%;
+// 	display: block;
+// 	border-radius: 50%;
+// 	width: 150px;
+// 	height: 150px;
+// 	z-index: 1;
+// 	// box-shadow: inset -12px 5px 0 3px #f3d076;
+// 	background-image: url('src/assets/images/saturn.jpeg');
+// 	background-size: cover;  
+//   }
+
+  .moon {
+	position: absolute;
+	top: 18%;
+	left: 40%;
+	display: block;
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+	z-index: 1;
+	background-image: url('src/assets/images/moon_smiley.jpg');
+	background-size: cover;
+  }
+
+  .full-moon {
+	position: absolute;
+	top: 19%;
+	left: 43%;
+	display: block;
+	border-radius: 50%;
+	width: 225px;
+	height: 225px;
+	z-index: 1;
+	background-image: url('src/assets/images/full-moon1.png');
+	background-size: cover;
+  }
+
+  .odometerContainer {
+	  position: absolute;
+	  top: 34%;
+	  left: 33%;
+	//   font-size: 100px;
+  }
+
+ng2-odometer {
+	color: #fff!important;
+}
+
+.up-button-container {
+	// background: PaleGoldenRod  ;
+	// height: 100vh;
+	position: absolute;
+	padding: 20px;
+	text-align: center;
+	top: 2%;
+	left: 50%;
+	right: 50%;
+	z-index: 2;
+	transform: rotate(180deg);
+  }
+  
+.button-container {
+	// background: PaleGoldenRod  ;
+	// height: 100vh;
+	position: absolute;
+	padding: 20px;
+	text-align: center;
+	bottom: 2%;
+	left: 50%;
+	right: 50%;
+	z-index: 1;
+  }
+  
+  .content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	  transform: translate(-50%, -50%);
+	
+	p {
+	  margin: 0 0 20px;
+	}
+	
+   }
+  
+/* Arrow & Hover Animation */
+#more-arrows {
+	width: 75px;
+	height: 65px;
+	
+	&:hover {
+	  
+	  polygon {
+		fill: #ffffff;
+		transition: all .2s ease-out;
+  
+		&.arrow-bottom {
+		  transform: translateY(-18px);
+		}
+  
+		&.arrow-top {
+		  transform: translateY(18px);
+		}
+		
+	  }
+	
+	}
+	
+}
+  
+polygon {
+	fill: #ffffff;
+	transition: all .2s ease-out;
+	  
+	&.arrow-middle {
+		opacity: 0.75;
+	  }
+  
+	  &.arrow-top {
+		opacity: 0.5
+	  }
+	   
+}
+
+.stars {
+    background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+    z-index:0;
+}
+
+.twinkling{
+    background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+    z-index:1;
+  
+    -moz-animation:move-twink-back 200s linear infinite;
+    -ms-animation:move-twink-back 200s linear infinite;
+    -o-animation:move-twink-back 200s linear infinite;
+    -webkit-animation:move-twink-back 200s linear infinite;
+    animation:move-twink-back 200s linear infinite;
+  }
+
+  @keyframes appear-out {
+	0% {
+		opacity: 0;
+	}  
+	100% {
+		opacity: 1;
+	}
+  }
+
+@keyframes type {
+	0% {
+		width: 0%;
+		height: 0%;
+		// max-lines: 1;
+	}
+	50% {
+		// height: 30%;
+		// max-lines: 2;
+	}
+	100% {
+		// border:none;
+		// width: 100%;
+		// max-lines: 3;
+	}
+}
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes STAR-MOVE {
+	from {
+		left: 0;
+		top: 0;
+	}
+	to { 
+		left: -10000px;
+		top: -2000px;
+	}
+}
+
+@-webkit-keyframes STAR-MOVE {
+	from {
+		background-position: 5% 5%
+	}
+	to { 
+		background-position: 1300% 600%
+	}
+}
+
