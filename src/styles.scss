@@ -51,6 +51,7 @@ $chocolate: #553c13;
 
 body {
     background-color: #333;
+    overflow: hidden;
 }
 
 @mixin foodColoring($color) {
