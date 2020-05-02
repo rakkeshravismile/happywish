@@ -1,6 +1,6 @@
 <audio src="assets/audio/Happy_birthday_piano_music.mp3" autoplay="autoplay" loop="loop"></audio>
-<app-intro #intro (scroll)="onScroll()" (moveDown)="scrollDown()"></app-intro>
-<app-counter #counter (scroll)="onScroll()" (moveUpFromCounter)="scrollUpFromCounter()" (moveDownFromCounter)="scrollDownFromCounter()"></app-counter>
+<app-intro #intro  (moveDown)="scrollDown()"></app-intro>
+<app-counter #counter  (moveUpFromCounter)="scrollUpFromCounter()" (moveDownFromCounter)="scrollDownFromCounter()"></app-counter>
 <app-calendar #calendar (moveUpFromCalendar)="scrollUpFromCalendar()" (moveDownFromCalendar)="scrollDownFromCalendar()"></app-calendar>
 <app-magicalname #magicalname (moveUpFromMagicalName)="scrollUpFromMagicalName()"></app-magicalname>
  <!-- <audio controls loop>

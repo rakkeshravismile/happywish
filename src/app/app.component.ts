@@ -31,7 +31,7 @@ export class AppComponent {
   //   console.log('Scrolled');
   // }
 
-  
+
   public scrollDown() {
     console.log('Scroll down clicked');
     this.counterComponent.centerView();

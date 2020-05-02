@@ -1,7 +1,4 @@
 import { Component, OnInit, ViewChild, ElementRef, Output } from '@angular/core';
-import { backgroundimgLocation, foregroundimgLocation, midgroundimgLocation } from './../label.constants';
-import { Observable, Observer } from 'rxjs';
-import { share } from 'rxjs/operators';
 import { EventEmitter } from '@angular/core';
 
 @Component({
